@@ -9,25 +9,26 @@ export default function Header() {
   return (
     <header
       style={{
-        width: "100%",
-        background: "rgba(6,18,36,0.92)",
-        backdropFilter: "blur(10px)",
-        padding: "18px 40px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-        boxSizing: "border-box",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-      }}
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  flexWrap: "wrap",
+  padding: "20px",
+  gap: "20px",
+}}
     >
 
       <meta
   name="keywords"
   content="Kosi Bay accommodation, bush lodge, safari lodge, Kosi Bay lodge, South Africa lodge, Kosi Bay holiday, bushveld accommodation"
 />
+<meta property="og:title" content="Kingfisher Bush Lodge" />
+<meta
+  property="og:description"
+  content="Luxury accommodation and unforgettable adventures near Kosi Bay."
+/>
+<meta property="og:image" content="/images/social-preview.jpg" />
+<meta property="og:type" content="website" />
 
       {/* LEFT SIDE */}
       <div

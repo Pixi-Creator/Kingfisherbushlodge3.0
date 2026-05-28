@@ -5,9 +5,10 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 const inputStyle = {
-  padding: "14px",
-  borderRadius: "12px",
-  border: "none",
+  padding: "12px",
+  borderRadius: "10px",
+  width: "100%"
+  boxSizing: "border-box" as const,
   background: "#1f2937",
   color: "white",
 };
@@ -291,7 +292,7 @@ export default function App() {
   style={{
     marginTop: "30px",
     background: "#1f2937",
-    padding: "30px",
+    padding: "20px",
     borderRadius: "20px",
     maxWidth: "1100px",
     marginInline: "auto",
@@ -574,7 +575,7 @@ export default function App() {
                 alt={activity.title}
                 style={{
                   width: "100%",
-                  height: "260px",
+                  height: "200px",
                   objectFit: "cover",
                 }}
               />
@@ -584,7 +585,7 @@ export default function App() {
                   style={{
                     color: "#d4b97f",
                     marginBottom: "20px",
-                    fontSize: "1.7rem",
+                    fontSize: "1.4rem",
                   }}
                 >
                   {activity.title}
