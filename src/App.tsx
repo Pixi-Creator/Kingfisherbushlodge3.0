@@ -287,6 +287,43 @@ export default function App() {
 <div
   style={{
     marginTop: "30px",
+    background: "#2b1f1f",
+    padding: "25px",
+    borderRadius: "20px",
+    maxWidth: "1100px",
+    marginInline: "auto",
+    border: "1px solid #d4b97f",
+  }}
+>
+  <h3
+    style={{
+      marginBottom: "20px",
+      fontSize: "1.8rem",
+      color: "#d4b97f",
+    }}
+  >
+    Cancellation Policy
+  </h3>
+
+  <p
+    style={{
+      lineHeight: 1.9,
+      fontSize: "1.05rem",
+      color: "#f3f4f6",
+    }}
+  >
+    • Cancellations made 14 days or more before arrival qualify for a 100%
+    refund of the deposited amount.
+    <br />
+    <br />
+    • Cancellations made less than 14 days before arrival will result in a
+    100% forfeit of the deposited amount.
+  </p>
+</div>
+
+<div
+  style={{
+    marginTop: "30px",
     background: "#1f2937",
     padding: "20px",
     borderRadius: "20px",
@@ -442,71 +479,9 @@ export default function App() {
                   {room.description}
                 </p>
 
-                {/* LOW SEASON */}
-                <div
-                  style={{
-                    marginBottom: "20px",
-                    backgroundColor: "#2a2a2a",
-                    padding: "15px",
-                    borderRadius: "12px",
-                  }}
-                >
-                  <h4
-                    style={{
-                      color: "#c2b280",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    Low Season Rates
-                  </h4>
-
-                  {Object.entries(room.lowSeason).map(([year, price]) => (
-                    <p
-                      key={year}
-                      style={{
-                        color: "#ffffff",
-                        margin: "5px 0",
-                      }}
-                    >
-                      {year}: {price}
-                    </p>
-                  ))}
-                </div>
-
-                {/* HIGH SEASON */}
-                <div
-                  style={{
-                    marginBottom: "25px",
-                    backgroundColor: "#2a2a2a",
-                    padding: "15px",
-                    borderRadius: "12px",
-                  }}
-                >
-                  <h4
-                    style={{
-                      color: "#c2b280",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    High Season Rates
-                  </h4>
-
-                  {Object.entries(room.highSeason).map(([year, price]) => (
-                    <p
-                      key={year}
-                      style={{
-                        color: "#ffffff",
-                        margin: "5px 0",
-                      }}
-                    >
-                      {year}: {price}
-                    </p>
-                  ))}
-                </div>
-
                 {/* BOOK BUTTON */}
                 <a
-                  href={`"https://book.nightsbridge.com/23617"?room=${encodeURIComponent(room.title)}`}
+                  href="https://book.nightsbridge.com/23617"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -596,36 +571,93 @@ export default function App() {
                   {activity.description}
                 </p>
 
-                <form
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "14px",
-                  }}
-                >
-                  <input placeholder="Full Name" style={inputStyle} />
-                  <input placeholder="Phone Number" style={inputStyle} />
-                  <input placeholder="Email Address" style={inputStyle} />
-                  <input type="date" style={inputStyle} />
+               <form
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "14px",
+  }}
+  onSubmit={(e) => {
+    e.preventDefault();
 
-                  <a
-                    href="https://wa.me/27722423571"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      background: "#556b2f",
-                      padding: "16px",
-                      borderRadius: "50px",
-                      textAlign: "center",
-                      textDecoration: "none",
-                      color: "white",
-                      fontWeight: "bold",
-                      marginTop: "10px",
-                    }}
-                  >
-                    Enquire on WhatsApp
-                  </a>
-                </form>
+    const form = e.currentTarget;
+
+    const fullName = (
+      form.elements.namedItem("fullName") as HTMLInputElement
+    ).value;
+
+    const phone = (
+      form.elements.namedItem("phone") as HTMLInputElement
+    ).value;
+
+    const email = (
+      form.elements.namedItem("email") as HTMLInputElement
+    ).value;
+
+    const date = (
+      form.elements.namedItem("date") as HTMLInputElement
+    ).value;
+
+    const message = `Hello Kingfisher Bush Lodge,
+
+I would like to enquire about:
+${activity.title}
+
+Full Name: ${fullName}
+Phone Number: ${phone}
+Email Address: ${email}
+Preferred Date: ${date}`;
+
+    const whatsappURL = `https://wa.me/27722423571?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  }}
+>
+  <input
+    name="fullName"
+    placeholder="Full Name"
+    style={inputStyle}
+  />
+
+  <input
+    name="phone"
+    placeholder="Phone Number"
+    style={inputStyle}
+  />
+
+  <input
+    name="email"
+    placeholder="Email Address"
+    style={inputStyle}
+  />
+
+  <input
+    name="date"
+    type="date"
+    style={inputStyle}
+  />
+
+  <button
+    type="submit"
+    style={{
+      background: "#556b2f",
+      padding: "16px",
+      borderRadius: "50px",
+      textAlign: "center",
+      border: "none",
+      color: "white",
+      fontWeight: "bold",
+      marginTop: "10px",
+      cursor: "pointer",
+      fontSize: "1rem",
+    }}
+  >
+    Enquire on WhatsApp
+  </button>
+</form>
+
               </div>
             </div>
           ))}

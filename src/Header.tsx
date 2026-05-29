@@ -120,8 +120,8 @@ export default function Header() {
           </a>
 
           <a href="#about" style={navStyle}>
-            About
-          </a>
+  Important Info
+</a>
 
           <a href="#rooms" style={navStyle}>
             Accommodation
