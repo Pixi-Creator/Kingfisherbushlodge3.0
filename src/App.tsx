@@ -116,6 +116,33 @@ const rooms = [
       2028: "R2300",
     },
   },
+
+  {
+  title: "Private Campsites",
+
+  images: [
+    "/images/rooms/campsite/1.jpg",
+    "/images/rooms/campsite/2.jpg",
+    "/images/rooms/campsite/3.jpg",
+    "/images/rooms/campsite/4.jpg",
+  ],
+
+  description:
+    "Spacious private campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite.",
+
+  lowSeason: {
+    2026: "R500",
+    2027: "R600",
+    2028: "R700",
+  },
+
+  highSeason: {
+    2026: "R500",
+    2027: "R600",
+    2028: "R700",
+  },
+},
+
 ];
 
 const activities = [
