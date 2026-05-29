@@ -26,6 +26,17 @@ const rooms = [
     description:
       "Fully equipped air-conditioned chalet with kitchenette and private braai area. Sleeps 2 guests comfortably. Extra Bed available on request.",
 
+    lowSeason: {
+      2026: "R1400",
+      2027: "R1500",
+      2028: "R1600",
+    },
+
+    highSeason: {
+      2026: "R1700",
+      2027: "R1800",
+      2028: "R1900",
+    },
   },
 
   {
@@ -40,6 +51,18 @@ const rooms = [
 
     description:
       "Comfortable safari tents with communal kitchen, separate from the unit is private ablution facilities and private braai area.",
+
+    lowSeason: {
+      2026: "R700",
+      2027: "R800",
+      2028: "R900",
+    },
+
+    highSeason: {
+      2026: "R900",
+      2027: "R1000",
+      2028: "R1100",
+    },
   },
 
   {
@@ -54,6 +77,18 @@ const rooms = [
 
     description:
       "Spacious family tent with queen bed, bunk bed and sleeper couch. Sleeps up to 5 guests.",
+
+    lowSeason: {
+      2026: "R1700",
+      2027: "R1800",
+      2028: "R1900",
+    },
+
+    highSeason: {
+      2026: "R2000",
+      2027: "R2100",
+      2028: "R2200",
+    },
   },
 
   {
@@ -68,6 +103,18 @@ const rooms = [
 
     description:
       "Two-bedroom family unit with kitchenette, lounge area and private braai facilities.",
+
+    lowSeason: {
+      2026: "R1900",
+      2027: "R2000",
+      2028: "R2100",
+    },
+
+    highSeason: {
+      2026: "R2100",
+      2027: "R2200",
+      2028: "R2300",
+    },
   },
 
   {
@@ -82,6 +129,18 @@ const rooms = [
 
   description:
     "Spacious campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite.",
+
+  lowSeason: {
+    2026: "R500",
+    2027: "R600",
+    2028: "R700",
+  },
+
+  highSeason: {
+    2026: "R500",
+    2027: "R600",
+    2028: "R700",
+  },
 },
 
 ];
@@ -447,7 +506,7 @@ export default function App() {
 
                 {/* BOOK BUTTON */}
                 <a
-                  href={`https://wa.me/27722423571?text=Hello%20Kingfisher%20Bush%20Lodge,%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(
+                  href={`https://book.nightsbridge.com/23617{encodeURIComponent(
                     room.title
                   )}`}
                   target="_blank"
@@ -863,22 +922,22 @@ Children: ${children}
 
   <input name="children" placeholder="Number of Children" style={inputStyle} />
 
-  <a
-  href={`mailto:info@kosibaysouthafrica.co.za?subject=Kingfisher Bush Lodge Enquiry`}
-  style={{
-    background: "#556b2f",
-    padding: "16px",
-    borderRadius: "50px",
-    textAlign: "center",
-    textDecoration: "none",
-    color: "white",
-    fontWeight: "bold",
-    marginTop: "10px",
-    display: "block",
-  }}
->
-  Send Email Enquiry
-</a>
+  <button
+    type="submit"
+    style={{
+      background: "#556b2f",
+      padding: "16px",
+      borderRadius: "50px",
+      textAlign: "center",
+      color: "white",
+      fontWeight: "bold",
+      marginTop: "10px",
+      border: "none",
+      cursor: "pointer",
+    }}
+  >
+    Send Email Enquiry
+  </button>
 
             <a
               href="https://wa.me/27722423571"
