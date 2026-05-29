@@ -876,67 +876,51 @@ export default function App() {
             borderRadius: "24px",
           }}
         >
-         <form
-  name="enquiry"
-  method="POST"
-  data-netlify="true"
+        <form
+  onSubmit={(e) => {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const date = (form.elements.namedItem("date") as HTMLInputElement).value;
+    const adults = (form.elements.namedItem("adults") as HTMLInputElement).value;
+    const children = (form.elements.namedItem("children") as HTMLInputElement).value;
+
+    const subject = `Kingfisher Bush Lodge Enquiry`;
+
+    const body = `
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Preferred Date: ${date}
+Adults: ${adults}
+Children: ${children}
+    `;
+
+    window.location.href = `mailto:info@kosibaysouthafrica.co.za?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  }}
   style={{
     display: "flex",
     flexDirection: "column",
     gap: "14px",
   }}
 >
-  <input type="hidden" name="form-name" value="enquiry" />
+  <input name="name" placeholder="Full Name" style={inputStyle} />
 
-  <input
-    name="name"
-    placeholder="Full Name"
-    style={inputStyle}
-    required
-  />
+  <input name="phone" placeholder="Phone Number" style={inputStyle} />
 
-  <input
-    name="phone"
-    placeholder="Phone Number"
-    style={inputStyle}
-    required
-  />
+  <input name="email" placeholder="Email Address" style={inputStyle} />
 
-  <input
-    name="email"
-    type="email"
-    placeholder="Email Address"
-    style={inputStyle}
-    required
-  />
+  <input name="date" type="date" style={inputStyle} />
 
-  <input
-    name="date"
-    type="date"
-    style={inputStyle}
-  />
+  <input name="adults" placeholder="Number of Adults" style={inputStyle} />
 
-  <input
-    name="adults"
-    placeholder="Number of Adults"
-    style={inputStyle}
-  />
-
-  <input
-    name="children"
-    placeholder="Number of Children"
-    style={inputStyle}
-  />
-
-  <textarea
-    name="message"
-    placeholder="Additional Information"
-    style={{
-      ...inputStyle,
-      minHeight: "120px",
-      resize: "vertical",
-    }}
-  />
+  <input name="children" placeholder="Number of Children" style={inputStyle} />
 
   <button
     type="submit"
@@ -944,14 +928,15 @@ export default function App() {
       background: "#556b2f",
       padding: "16px",
       borderRadius: "50px",
+      textAlign: "center",
       color: "white",
       fontWeight: "bold",
+      marginTop: "10px",
       border: "none",
       cursor: "pointer",
-      marginTop: "10px",
     }}
   >
-    Send Enquiry
+    Send Email Enquiry
   </button>
 
             <a
