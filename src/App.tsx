@@ -877,29 +877,25 @@ export default function App() {
           }}
         >
          <form
-  name="Enquiry Form"
+  name="enquiry"
   method="POST"
   data-netlify="true"
   style={{
     display: "flex",
     flexDirection: "column",
     gap: "14px",
-    width: "100%",
   }}
 >
-  {/* REQUIRED FOR NETLIFY */}
-  <input type="hidden" name="form-name" value="Enquiry Form" />
+  <input type="hidden" name="form-name" value="enquiry" />
 
   <input
-    type="text"
-    name="fullName"
+    name="name"
     placeholder="Full Name"
     style={inputStyle}
     required
   />
 
   <input
-    type="tel"
     name="phone"
     placeholder="Phone Number"
     style={inputStyle}
@@ -907,28 +903,26 @@ export default function App() {
   />
 
   <input
-    type="email"
     name="email"
+    type="email"
     placeholder="Email Address"
     style={inputStyle}
     required
   />
 
   <input
-    type="date"
     name="date"
+    type="date"
     style={inputStyle}
   />
 
   <input
-    type="text"
     name="adults"
     placeholder="Number of Adults"
     style={inputStyle}
   />
 
   <input
-    type="text"
     name="children"
     placeholder="Number of Children"
     style={inputStyle}
@@ -937,29 +931,28 @@ export default function App() {
   <textarea
     name="message"
     placeholder="Additional Information"
-    rows={5}
     style={{
       ...inputStyle,
+      minHeight: "120px",
       resize: "vertical",
     }}
   />
 
-  <a
-  href={`mailto:info@kosibaysouthafrica.co.za?subject=Kingfisher Bush Lodge Enquiry`}
-  style={{
-    background: "#556b2f",
-    padding: "16px",
-    borderRadius: "50px",
-    textAlign: "center",
-    textDecoration: "none",
-    color: "white",
-    fontWeight: "bold",
-    marginTop: "10px",
-    display: "block",
-  }}
->
-  Send Email Enquiry
-</a>
+  <button
+    type="submit"
+    style={{
+      background: "#556b2f",
+      padding: "16px",
+      borderRadius: "50px",
+      color: "white",
+      fontWeight: "bold",
+      border: "none",
+      cursor: "pointer",
+      marginTop: "10px",
+    }}
+  >
+    Send Enquiry
+  </button>
 
             <a
               href="https://wa.me/27722423571"
