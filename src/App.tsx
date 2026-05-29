@@ -506,9 +506,7 @@ export default function App() {
 
                 {/* BOOK BUTTON */}
                 <a
-                  href={`https://book.nightsbridge.com/23617{encodeURIComponent(
-                    room.title
-                  )}`}
+                  href={`"https://book.nightsbridge.com/23617"?room=${encodeURIComponent(room.title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
