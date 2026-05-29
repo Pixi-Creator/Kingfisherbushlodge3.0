@@ -45,7 +45,7 @@ export default function Hero() {
             fontSize: "1rem",
           }}
         >
-          BUSHVELD ACCOMMODATION • KOSI BAY
+          BUSHVELD ACCOMMODATION • WELCOME TO
         </p>
 
         <h1
