@@ -944,22 +944,23 @@ export default function App() {
     }}
   />
 
-  <button
-    type="submit"
-    style={{
-      background: "#556b2f",
-      padding: "16px",
-      borderRadius: "50px",
-      border: "none",
-      color: "white",
-      fontWeight: "bold",
-      cursor: "pointer",
-      marginTop: "10px",
-      fontSize: "1rem",
-    }}
-  >
-    Send Email Enquiry
-  </button>
+  <a
+  href={`mailto:info@kosibaysouthafrica.co.za?subject=Kingfisher Bush Lodge Enquiry`}
+  style={{
+    background: "#556b2f",
+    padding: "16px",
+    borderRadius: "50px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "white",
+    fontWeight: "bold",
+    marginTop: "10px",
+    display: "block",
+  }}
+>
+  Send Email Enquiry
+</a>
+
             <a
               href="https://wa.me/27722423571"
               target="_blank"
