@@ -220,28 +220,6 @@ export default function App() {
           textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            fontSize: "clamp(2rem, 5vw, 3rem)",
-            color: "#d4b97f",
-            marginBottom: "30px",
-          }}
-        >
-          Welcome to Kingfisher Bush Lodge
-        </h2>
-
-        <p
-          style={{
-            maxWidth: "1200px",
-            margin: "auto",
-            lineHeight: 2,
-            fontSize: "1.2rem",
-          }}
-        >
-          Kingfisher Bush Lodge opened its doors in May 2018 and has welcomed
-          guests from around the globe to this unique and beautiful part of
-          South Africa.
-        </p>
 
         <div
   style={{
