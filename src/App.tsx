@@ -876,56 +876,90 @@ export default function App() {
             borderRadius: "24px",
           }}
         >
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "18px",
-            }}
-          >
-            <input
-              type="text"
-              placeholder="Full Name"
-              style={inputStyle}
-            />
+         <form
+  name="Enquiry Form"
+  method="POST"
+  data-netlify="true"
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "14px",
+    width: "100%",
+  }}
+>
+  {/* REQUIRED FOR NETLIFY */}
+  <input type="hidden" name="form-name" value="Enquiry Form" />
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              style={inputStyle}
-            />
+  <input
+    type="text"
+    name="fullName"
+    placeholder="Full Name"
+    style={inputStyle}
+    required
+  />
 
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              style={inputStyle}
-            />
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    style={inputStyle}
+    required
+  />
 
-            <textarea
-              placeholder="Your Message"
-              rows={6}
-              style={{
-                ...inputStyle,
-                resize: "none",
-              }}
-            />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    style={inputStyle}
+    required
+  />
 
-            <a
-              href="mailto:info@kosibaysouthafrica.co.za"
-              style={{
-                background: "#556b2f",
-                padding: "16px",
-                borderRadius: "50px",
-                textAlign: "center",
-                textDecoration: "none",
-                color: "white",
-                fontWeight: "bold",
-                marginTop: "10px",
-              }}
-            >
-              Send Email Enquiry
-            </a>
+  <input
+    type="date"
+    name="date"
+    style={inputStyle}
+  />
 
+  <input
+    type="text"
+    name="adults"
+    placeholder="Number of Adults"
+    style={inputStyle}
+  />
+
+  <input
+    type="text"
+    name="children"
+    placeholder="Number of Children"
+    style={inputStyle}
+  />
+
+  <textarea
+    name="message"
+    placeholder="Additional Information"
+    rows={5}
+    style={{
+      ...inputStyle,
+      resize: "vertical",
+    }}
+  />
+
+  <button
+    type="submit"
+    style={{
+      background: "#556b2f",
+      padding: "16px",
+      borderRadius: "50px",
+      border: "none",
+      color: "white",
+      fontWeight: "bold",
+      cursor: "pointer",
+      marginTop: "10px",
+      fontSize: "1rem",
+    }}
+  >
+    Send Email Enquiry
+  </button>
             <a
               href="https://wa.me/27722423571"
               target="_blank"
