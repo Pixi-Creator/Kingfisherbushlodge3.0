@@ -136,25 +136,80 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* GOOGLE MAP */}
-      <div
-        style={{
-          marginBottom: "50px",
-          borderRadius: "24px",
-          overflow: "hidden",
-        }}
-      >
-        <iframe
-          src="https://www.google.com/maps?q=Kosi%20Bay%20South%20Africa&output=embed"
-          width="100%"
-          height="450"
-          style={{
-            border: 0,
-          }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+      {/* LOCATION */}
+<section
+  id="location"
+  style={{
+    padding: "100px 8%",
+    background: "#0f1720",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "3rem",
+      color: "#d4b97f",
+      marginBottom: "30px",
+    }}
+  >
+    Find Us
+  </h2>
+
+  <p
+    style={{
+      color: "#d1d5db",
+      marginBottom: "30px",
+      fontSize: "1.1rem",
+      lineHeight: 1.8,
+    }}
+  >
+    Kingfisher Bush Lodge <br />
+    RD D1846, Kwamazambane, Manguzi, 3973
+  </p>
+
+  {/* GOOGLE MAP */}
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "1200px",
+      margin: "0 auto",
+      borderRadius: "24px",
+      overflow: "hidden",
+      boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+    }}
+  >
+    <iframe
+      src="https://www.google.com/maps?q=Kingfisher+Bush+Lodge+Kwamazambane+Manguzi&output=embed"
+      width="100%"
+      height="500"
+      style={{
+        border: 0,
+      }}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  {/* DIRECTIONS BUTTON */}
+  <a
+    href="https://google.com/maps?cid=1201529776513704726"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      marginTop: "35px",
+      background: "#556b2f",
+      color: "white",
+      padding: "16px 34px",
+      borderRadius: "50px",
+      textDecoration: "none",
+      fontWeight: "bold",
+      fontSize: "1rem",
+    }}
+  >
+    Open in Google Maps
+  </a>
+</section>
 
       {/* BOTTOM */}
       <div

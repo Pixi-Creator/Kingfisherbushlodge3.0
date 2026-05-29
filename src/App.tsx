@@ -822,6 +822,130 @@ export default function App() {
         </div>
       </section>
 
+      {/* CONTACT */}
+      <section
+        id="contact"
+        style={{
+          padding: "100px 8%",
+          background: "#0f1720",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "3rem",
+            color: "#d4b97f",
+            marginBottom: "20px",
+          }}
+        >
+          Contact Us
+        </h2>
+
+        <p
+          style={{
+            color: "#d1d5db",
+            marginBottom: "20px",
+            fontSize: "1.1rem",
+          }}
+        >
+          We'd love to help you plan your perfect Kosi Bay getaway.
+        </p>
+
+        {/* EMAIL LINK */}
+        <a
+          href="mailto:info@kosibaysouthafrica.co.za"
+          style={{
+            color: "#d4b97f",
+            fontSize: "1.2rem",
+            textDecoration: "none",
+            fontWeight: "bold",
+            display: "inline-block",
+            marginBottom: "50px",
+          }}
+        >
+          info@kosibaysouthafrica.co.za
+        </a>
+
+        {/* CONTACT FORM */}
+        <div
+          style={{
+            maxWidth: "700px",
+            margin: "auto",
+            background: "#111827",
+            padding: "40px",
+            borderRadius: "24px",
+          }}
+        >
+          <form
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "18px",
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Full Name"
+              style={inputStyle}
+            />
+
+            <input
+              type="email"
+              placeholder="Email Address"
+              style={inputStyle}
+            />
+
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              style={inputStyle}
+            />
+
+            <textarea
+              placeholder="Your Message"
+              rows={6}
+              style={{
+                ...inputStyle,
+                resize: "none",
+              }}
+            />
+
+            <a
+              href="mailto:info@kosibaysouthafrica.co.za"
+              style={{
+                background: "#556b2f",
+                padding: "16px",
+                borderRadius: "50px",
+                textAlign: "center",
+                textDecoration: "none",
+                color: "white",
+                fontWeight: "bold",
+                marginTop: "10px",
+              }}
+            >
+              Send Email Enquiry
+            </a>
+
+            <a
+              href="https://wa.me/27722423571"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "#25D366",
+                padding: "16px",
+                borderRadius: "50px",
+                textAlign: "center",
+                textDecoration: "none",
+                color: "white",
+                fontWeight: "bold",
+              }}
+            >
+              Chat on WhatsApp
+            </a>
+          </form>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
