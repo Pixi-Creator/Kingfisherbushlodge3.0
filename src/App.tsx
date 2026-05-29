@@ -922,22 +922,22 @@ Children: ${children}
 
   <input name="children" placeholder="Number of Children" style={inputStyle} />
 
-  <button
-    type="submit"
-    style={{
-      background: "#556b2f",
-      padding: "16px",
-      borderRadius: "50px",
-      textAlign: "center",
-      color: "white",
-      fontWeight: "bold",
-      marginTop: "10px",
-      border: "none",
-      cursor: "pointer",
-    }}
-  >
-    Send Email Enquiry
-  </button>
+  <a
+  href={`mailto:info@kosibaysouthafrica.co.za?subject=Kingfisher Bush Lodge Enquiry`}
+  style={{
+    background: "#556b2f",
+    padding: "16px",
+    borderRadius: "50px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "white",
+    fontWeight: "bold",
+    marginTop: "10px",
+    display: "block",
+  }}
+>
+  Send Email Enquiry
+</a>
 
             <a
               href="https://wa.me/27722423571"
