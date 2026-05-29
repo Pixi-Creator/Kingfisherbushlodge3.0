@@ -8,14 +8,43 @@ const navStyle = {
 export default function Header() {
   return (
     <header
+<div
+  style={{
+    position: "absolute",
+    top: "100%",
+    left: "50%",
+    transform: "translateX(-50%)",
+    background: "#d4b97f",
+    color: "#111827",
+    padding: "8px 18px",
+    borderRadius: "0 0 14px 14px",
+    fontWeight: "bold",
+    fontSize: "0.9rem",
+    zIndex: 999,
+    boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
+    textAlign: "center",
+    whiteSpace: "nowrap",
+  }}
+>
+  🎉 Direct Bookings Receive 15% Discount
+</div>
+    
       style={{
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  flexWrap: "wrap",
-  padding: "20px",
-  gap: "20px",
-}}
+        width: "100%",
+        background: "rgba(6,18,36,0.92)",
+        backdropFilter: "blur(10px)",
+        padding: "18px 40px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+        gap: "20px",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        boxSizing: "border-box",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+      }}
     >
 
       <meta

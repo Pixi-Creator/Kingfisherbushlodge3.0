@@ -118,7 +118,7 @@ const rooms = [
   },
 
   {
-  title: "Private Campsites",
+  title: "Campsites",
 
   images: [
     "/images/rooms/campsite/1.jpg",
@@ -128,7 +128,7 @@ const rooms = [
   ],
 
   description:
-    "Spacious private campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite.",
+    "Spacious campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite.",
 
   lowSeason: {
     2026: "R500",
