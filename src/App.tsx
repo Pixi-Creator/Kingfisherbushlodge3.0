@@ -8,7 +8,7 @@ import RoomSlideshow from './RoomSlideshow'
 import BookingForm from './BookingForm'
 
 /* ─── GA4 — replace with your real ID ─── */
-const GA_ID = 'G-XXXXXXXXXX'
+const GA_ID = 'G-3JRVV8G538'
 
 /* ─── Constants ─── */
 const WA        = 'https://wa.me/27722423571?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Kingfisher%20Bush%20Lodge'
@@ -224,7 +224,7 @@ export default function App() {
 
   /* Google Analytics */
   useEffect(() => {
-    if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') return
+    if (!GA_ID || GA_ID === 'G-3JRVV8G538') return
     const s1 = document.createElement('script'); s1.async = true; s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`; document.head.appendChild(s1)
     const s2 = document.createElement('script'); s2.text = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`; document.head.appendChild(s2)
   }, [])
