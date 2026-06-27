@@ -23,7 +23,7 @@ const ROOMS = [
     capacity: 'Sleeps 2 (extra bed available — up to 3)',
     badge: 'Most popular',
     desc: 'Fully equipped, air-conditioned chalet with kitchenette and private braai area. Sleeps 2 guests comfortably with an extra bed available on request.',
-    features: ['Air conditioning', 'En-suite bathroom', 'Kitchenette', 'Private braai area', 'Extra bed on request'],
+    features: ['Air conditioning', 'En-suite bathroom', 'Kitchenette', 'Self-Catering', 'Private braai area', 'Extra bed on request at additional cost'],
     images: [
       { src: '/images/rooms/chalet/1.jpg', alt: 'Luxury Tented En-Suite Chalet exterior' },
       { src: '/images/rooms/chalet/2.jpg', alt: 'Chalet bedroom' },
@@ -36,7 +36,7 @@ const ROOMS = [
     capacity: 'Sleeps 2',
     badge: '',
     desc: 'Comfortable safari tents with access to communal kitchen. Each unit has its own private ablution facilities and private braai area — the true bush experience.',
-    features: ['Private ablution', 'Communal kitchen', 'Private braai area', 'Bush atmosphere'],
+    features: ['Private ablution', 'Communal kitchen', 'Self-Catering', 'Private braai area', 'Bush atmosphere'],
     images: [
       { src: '/images/rooms/safari/1.jpg', alt: 'Standard Safari Tent exterior' },
       { src: '/images/rooms/safari/2.jpg', alt: 'Safari Tent interior' },
@@ -49,7 +49,7 @@ const ROOMS = [
     capacity: 'Sleeps up to 5',
     badge: 'Family favourite',
     desc: 'Spacious family tent with a queen bed, bunk bed and sleeper couch. Perfect for families wanting comfort with a true safari feel. Sleeps up to 5 guests.',
-    features: ['Queen bed + bunks', 'Air conditioning', 'En-suite bathroom', 'Private braai', 'Family sized'],
+    features: ['Queen bed + bunks', 'Air conditioning', 'En-suite bathroom', 'Kitchenette', 'Self-Catering', 'Private braai', 'Family sized'],
     images: [
       { src: '/images/rooms/family/1.jpg', alt: 'Luxury Family Tent exterior' },
       { src: '/images/rooms/family/2.jpg', alt: 'Family Tent living space' },
@@ -62,7 +62,7 @@ const ROOMS = [
     capacity: 'Sleeps up to 5',
     badge: '',
     desc: 'Two-bedroom family unit with kitchenette, lounge area and private braai facilities. Ideal for families or groups wanting a home-away-from-home in the bush.',
-    features: ['2 bedrooms', 'Kitchenette', 'Lounge area', 'Private braai', 'Up to 5 guests'],
+    features: ['2 bedrooms', 'Kitchenette', 'Lounge area', 'Private braai', 'Self-Catering', 'Up to 5 guests'],
     images: [
       { src: '/images/rooms/two-bedroom/1.jpg', alt: 'Two Bedroom Family Unit exterior' },
       { src: '/images/rooms/two-bedroom/2.jpg', alt: 'Family Unit bedroom' },
@@ -75,7 +75,7 @@ const ROOMS = [
     capacity: 'Up to 4 guests per site',
     badge: 'Budget friendly',
     desc: 'Spacious campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite. Bring your own tent or caravan.',
-    features: ['Electrical points', 'Water points', 'Private ablution', 'Up to 4 guests', 'Tent or caravan'],
+    features: ['Electrical points', 'Water points', 'Private ablution', 'Self-Catering', 'Up to 4 guests', 'Tent or caravan'],
     images: [
       { src: '/images/rooms/campsite/1.jpg', alt: 'Campsite at Kingfisher' },
       { src: '/images/rooms/campsite/2.jpg', alt: 'Campsite bush setting' },
