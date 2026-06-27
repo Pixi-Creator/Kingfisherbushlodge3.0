@@ -216,15 +216,24 @@ p  { line-height: 1.78; color: var(--text-body); }
    * view, ideally taken in golden hour light.
    * ═══════════════════════════════════════════════════
    */
-  background: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1800&q=80') center 30% / cover;
+  background: url('/images/hero/hero-2.jpg') center 30% / cover;
   transform: scale(1.04); transition: transform 8s ease;
 }
 .hero-bg.loaded { transform: scale(1); }
 
 .hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(10,28,26,.9) 0%, rgba(10,28,26,.45) 55%, rgba(10,28,26,.15) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,   /* Darker at the top for the transparent navbar */
+    rgba(0, 0, 0, 0.25) 40%,  /* Light in the middle to let your sunrise shine */
+    rgba(0, 0, 0, 0.65) 100%  /* Darker at the bottom for the buttons */
+  );
+  pointer-events: none;
+  z-index: 2;
 }
+
 .hero-water {
   position: absolute; inset: 0; pointer-events: none;
   background: repeating-linear-gradient(180deg, transparent 0, transparent 18px, rgba(46,139,139,.04) 18px, rgba(46,139,139,.04) 19px);
