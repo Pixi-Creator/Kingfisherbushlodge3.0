@@ -118,16 +118,16 @@ const TOP_ACTIVITIES = [
     highlight: true,
   },
   {
-    id: 'turtle',
-    icon: '🐢',
-    name: 'Kosi Mouth Turtle Tour',
-    tagline: 'November – March only',
-    desc: 'From November to March, Loggerhead and Leatherback turtles visit Kosi beaches for nesting season. Join our specialist guides for an evening adventure. Transfer to Bhanga Nek by boat (20 min), then a beach walk of up to 12km in search of nesting turtles or hatchlings. Sunset coffee/tea and full briefing included. 85% success rate. Max 15 guests per night.',
-    options: ['Evening departure (5:00 PM)', 'Returns ~22:30'],
-    duration: '6–7 hours',
-    highlight: true,
-    seasonal: 'Nov – Mar only',
-  },
+  id: 'turtle',
+  icon: '🐢',
+  name: 'Kosi Turtle Tour',
+  tagline: 'November – March only',
+  desc: `Experience one of nature's most ancient rituals. Between November and March, the shores of Kosi Bay become a sanctuary for nesting Loggerhead and Leatherback turtles. Our specialist guides will lead you on an evening coastal safari. Travel to Bhanga Nek via a 20-minute boat cruise (weather permitting) or by 4x4 vehicle—alternatively, you can self-drive to the Kosi Bay mouth. Once on the shore, we embark on a guided beach walk of 1 to 10km. Depending on the timing of your stay, you will witness the majestic mothers laying their eggs (Nov - mid-Jan) or the magical rush of hatchlings heading for the surf (Jan - March).`,
+  options: ['Evening departure (5:00 PM)', 'Returns ~22:30'],
+  duration: '6–7 hours',
+  highlight: true,
+  seasonal: 'Nov – Mar only',
+}
 ]
 
 /* ─── OTHER ACTIVITIES ─── */

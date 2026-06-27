@@ -30,7 +30,7 @@ export default function Hero({ onEnquire }: { onEnquire: () => void }) {
           </h1>
 
           <p className="hero-desc">
-            Boutique bush lodge on the edge of one of South Africa's most pristine wilderness areas —
+            Kingfisher bush lodge is on the edge of one of South Africa's most pristine wilderness areas —
             home to ancient Thonga fish traps, glass-clear estuary waters and Africa's largest tuskers.
           </p>
 
