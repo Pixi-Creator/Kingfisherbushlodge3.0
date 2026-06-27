@@ -25,10 +25,10 @@ const ROOMS = [
     desc: 'Fully equipped, air-conditioned chalet with kitchenette and private braai area. Sleeps 2 guests comfortably with an extra bed available on request.',
     features: ['Air conditioning', 'En-suite bathroom', 'Kitchenette', 'Private braai area', 'Extra bed on request'],
     images: [
-      { src: 'public/images/rooms/chalet/1.jpg', alt: 'Luxury Tented En-Suite Chalet exterior' },
-      { src: 'public/images/rooms/chalet/2.jpg', alt: 'Chalet bedroom' },
-      { src: 'public/images/rooms/chalet/3.jpg', alt: 'Chalet kitchenette and living area' },
-      { src: 'public/images/rooms/chalet/4.jpg', alt: 'Chalet en-suite bathroom' },
+      { src: '/images/rooms/chalet/1.jpg', alt: 'Luxury Tented En-Suite Chalet exterior' },
+      { src: '/images/rooms/chalet/2.jpg', alt: 'Chalet bedroom' },
+      { src: '/images/rooms/chalet/3.jpg', alt: 'Chalet kitchenette and living area' },
+      { src: '/images/rooms/chalet/4.jpg', alt: 'Chalet en-suite bathroom' },
     ],
   },
   {
