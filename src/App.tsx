@@ -13,9 +13,8 @@ const GA_ID = 'G-3JRVV8G538'
 /* ─── Constants ─── */
 const WA        = 'https://wa.me/27722423571?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Kingfisher%20Bush%20Lodge'
 const NB        = 'https://book.nightsbridge.com/23617'
-const MAPS_LINK = 'https://maps.google.com/?cid=1201529776513704726'
-const MAPS_EMB  = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14389.0!2d32.8782!3d-26.9717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee3c4c9b9b9b9b9%3A0x10a9c8e9a8f5a516!2sKingfisher+Bush+Lodge!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza'
-
+const MAPS_LINK = 'https://maps.app.goo.gl/wiCFpL6W2uL7qiiBA'
+const MAPS_EMB  = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.642050830761!2d32.8219846!3d-26.94656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee4914d2483efe7%3A0x10acb0f73c276316!2sKingfisher%20Bush%20Lodge!5e0!3m2!1sen!2sza!4v1782560568700!5m2!1sen!2sza'
 /* ─── ROOMS — 5 real room types, 4 photos each ─── */
 const ROOMS = [
   {
@@ -599,6 +598,8 @@ export default function App() {
                     RD D1846, Kwamazambane<br />Manguzi, 3973<br />KwaZulu-Natal, South Africa
                   </a>
                 </div>
+
+
                 <div className="location-row">
                   <span className="location-label">📞 Phone</span>
                   <a href="tel:+27722423571" className="location-val location-link">+27 72 242 3571</a>
