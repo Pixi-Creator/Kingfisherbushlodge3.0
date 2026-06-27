@@ -1,1 +1,1 @@
-export const LOGO_SRC = "public/images/logo/logo.png"
+export const LOGO_SRC = "/images/logo/logo.png"

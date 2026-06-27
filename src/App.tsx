@@ -38,10 +38,10 @@ const ROOMS = [
     desc: 'Comfortable safari tents with access to communal kitchen. Each unit has its own private ablution facilities and private braai area — the true bush experience.',
     features: ['Private ablution', 'Communal kitchen', 'Private braai area', 'Bush atmosphere'],
     images: [
-      { src: 'public/images/rooms/safari/1.jpg', alt: 'Standard Safari Tent exterior' },
-      { src: 'public/images/rooms/safari/2.jpg', alt: 'Safari Tent interior' },
-      { src: 'public/images/rooms/safari/3.jpg', alt: 'Safari Tent bed setup' },
-      { src: 'public/images/rooms/safari/4.jpg', alt: 'Safari Tent surroundings' },
+      { src: '/images/rooms/safari/1.jpg', alt: 'Standard Safari Tent exterior' },
+      { src: '/images/rooms/safari/2.jpg', alt: 'Safari Tent interior' },
+      { src: '/images/rooms/safari/3.jpg', alt: 'Safari Tent bed setup' },
+      { src: '/images/rooms/safari/4.jpg', alt: 'Safari Tent surroundings' },
     ],
   },
   {
@@ -51,10 +51,10 @@ const ROOMS = [
     desc: 'Spacious family tent with a queen bed, bunk bed and sleeper couch. Perfect for families wanting comfort with a true safari feel. Sleeps up to 5 guests.',
     features: ['Queen bed + bunks', 'Air conditioning', 'En-suite bathroom', 'Private braai', 'Family sized'],
     images: [
-      { src: 'public/images/rooms/family/1.jpg', alt: 'Luxury Family Tent exterior' },
-      { src: 'public/images/rooms/family/2.jpg', alt: 'Family Tent living space' },
-      { src: 'public/images/rooms/family/3.jpg', alt: 'Family Tent sleeping area' },
-      { src: 'public/images/rooms/family/4.jpg', alt: 'Family Tent outdoor area' },
+      { src: '/images/rooms/family/1.jpg', alt: 'Luxury Family Tent exterior' },
+      { src: '/images/rooms/family/2.jpg', alt: 'Family Tent living space' },
+      { src: '/images/rooms/family/3.jpg', alt: 'Family Tent sleeping area' },
+      { src: '/images/rooms/family/4.jpg', alt: 'Family Tent outdoor area' },
     ],
   },
   {
@@ -64,10 +64,10 @@ const ROOMS = [
     desc: 'Two-bedroom family unit with kitchenette, lounge area and private braai facilities. Ideal for families or groups wanting a home-away-from-home in the bush.',
     features: ['2 bedrooms', 'Kitchenette', 'Lounge area', 'Private braai', 'Up to 5 guests'],
     images: [
-      { src: 'public/images/rooms/two-bedroom/1.jpg', alt: 'Two Bedroom Family Unit exterior' },
-      { src: 'public/images/rooms/two-bedroom/2.jpg', alt: 'Family Unit bedroom' },
-      { src: 'public/images/rooms/two-bedroom/3.jpg', alt: 'Family Unit lounge' },
-      { src: 'public/images/rooms/two-bedroom/4.jpg', alt: 'Family Unit kitchenette' },
+      { src: '/images/rooms/two-bedroom/1.jpg', alt: 'Two Bedroom Family Unit exterior' },
+      { src: '/images/rooms/two-bedroom/2.jpg', alt: 'Family Unit bedroom' },
+      { src: '/images/rooms/two-bedroom/3.jpg', alt: 'Family Unit lounge' },
+      { src: '/images/rooms/two-bedroom/4.jpg', alt: 'Family Unit kitchenette' },
     ],
   },
   {
@@ -77,10 +77,10 @@ const ROOMS = [
     desc: 'Spacious campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite. Bring your own tent or caravan.',
     features: ['Electrical points', 'Water points', 'Private ablution', 'Up to 4 guests', 'Tent or caravan'],
     images: [
-      { src: 'public/images/rooms/campsite/1.jpg', alt: 'Campsite at Kingfisher' },
-      { src: 'public/images/rooms/campsite/2.jpg', alt: 'Campsite bush setting' },
-      { src: 'public/images/rooms/campsite/3.jpg', alt: 'Campsite ablution facilities' },
-      { src: 'public/images/rooms/campsite/4.jpg', alt: 'Campsite evening atmosphere' },
+      { src: '/images/rooms/campsite/1.jpg', alt: 'Campsite at Kingfisher' },
+      { src: '/images/rooms/campsite/2.jpg', alt: 'Campsite bush setting' },
+      { src: '/images/rooms/campsite/3.jpg', alt: 'Campsite ablution facilities' },
+      { src: '/images/rooms/campsite/4.jpg', alt: 'Campsite evening atmosphere' },
     ],
   },
 ]
@@ -177,10 +177,10 @@ const HIGHLIGHTS = [
 ]
 
 const GALLERY = [
-  { src: 'public/images/gallery/1.jpg', tall: true,  alt: 'Wildlife at Kosi Bay' },
-  { src: 'public/images/gallery/2.jpg', tall: false, alt: 'Kosi estuary waters' },
-  { src: 'public/images/gallery/3.jpg', tall: false, alt: 'Coastal forest trail' },
-  { src: 'public/images/gallery/4.jpg', tall: false, alt: 'Sunset over the Kosi lake system' },
+  { src: '/images/gallery/1.jpg', tall: true,  alt: 'Wildlife at Kosi Bay' },
+  { src: '/images/gallery/2.jpg', tall: false, alt: 'Kosi estuary waters' },
+  { src: '/images/gallery/3.jpg', tall: false, alt: 'Coastal forest trail' },
+  { src: '/images/gallery/4.jpg', tall: false, alt: 'Sunset over the Kosi lake system' },
 ]
 
 /* ─── WhatsApp icon ─── */
@@ -268,8 +268,8 @@ export default function App() {
           <div className="container">
             <div className="about-inner">
               <div className="about-images reveal">
-                <img src="public/images/activities/snorkeling.jpg" alt="Kosi Bay estuary at golden hour — accommodation Kosi Bay" className="about-img-main" loading="lazy" />
-                <img src="public/images/restaurant/1.jpg" alt="Coastal forest surrounding Kingfisher Bush Lodge" className="about-img-inset" loading="lazy" />
+                <img src="/images/activities/snorkeling.jpg" alt="Kosi Bay estuary at golden hour — accommodation Kosi Bay" className="about-img-main" loading="lazy" />
+                <img src="/images/restaurant/1.jpg" alt="Coastal forest surrounding Kingfisher Bush Lodge" className="about-img-inset" loading="lazy" />
               </div>
               <div className="about-text reveal">
                 <span className="eyebrow">Accommodation in Kosi Bay</span>
@@ -395,7 +395,7 @@ export default function App() {
             <div className="restaurant-inner">
               <div className="restaurant-img-wrap reveal">
                 <img
-                  src="public/images/hero/hero-3.jpg"
+                  src="/images/hero/hero-3.jpg"
                   alt="Restaurant at Kingfisher Bush Lodge Kosi Bay"
                   className="restaurant-img"
                   loading="lazy"
