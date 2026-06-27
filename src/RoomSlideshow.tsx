@@ -3,12 +3,12 @@ import { useState, useEffect, useCallback } from 'react'
 interface Slide { src: string; alt: string }
 
 export default function RoomSlideshow({ images, roomName }: { images: Slide[]; roomName: string }) {
-  const [cur, setCur] = useState(0)
+  const [cur, setCur]       = useState(0)
   const [fading, setFading] = useState(false)
 
   const goTo = useCallback((idx: number) => {
     setFading(true)
-    setTimeout(() => { setCur(idx); setFading(false) }, 250)
+    setTimeout(() => { setCur(idx); setFading(false) }, 240)
   }, [])
 
   const prev = () => goTo((cur - 1 + images.length) % images.length)
@@ -26,15 +26,15 @@ export default function RoomSlideshow({ images, roomName }: { images: Slide[]; r
       </div>
 
       <button className="slide-btn slide-prev" onClick={prev} aria-label="Previous photo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
       <button className="slide-btn slide-next" onClick={next} aria-label="Next photo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
 
-      <div className="slide-dots">
+      <div className="slide-dots" role="tablist">
         {images.map((_, i) => (
-          <button key={i} className={`slide-dot${i === cur ? ' active' : ''}`} onClick={() => goTo(i)} aria-label={`Photo ${i + 1}`} />
+          <button key={i} className={`slide-dot${i === cur ? ' active' : ''}`} onClick={() => goTo(i)} role="tab" aria-label={`Photo ${i + 1}`} aria-selected={i === cur} />
         ))}
       </div>
 

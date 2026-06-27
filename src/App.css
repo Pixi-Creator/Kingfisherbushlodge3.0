@@ -1,16 +1,10 @@
-/* App.css — extra component styles that supplement index.css */
+/* App.css — supplementary styles */
 
-/* About note callout */
-.about-note {
-  display: flex;
-  align-items: flex-start;
-  gap: .65rem;
-  padding: .85rem 1rem;
-  background: var(--teal-pale);
-  border-left: 3px solid var(--teal-mid);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  font-size: .82rem;
-  color: var(--teal-deep);
-  margin-bottom: 1.4rem;
-  line-height: 1.6;
+/* Hero ghost button variant */
+.btn-ghost {
+  color: rgba(245,240,232,.65);
+  font-size: .73rem;
+  padding-inline: .4rem;
+  letter-spacing: .08em;
 }
+.btn-ghost:hover { color: var(--papyrus); }

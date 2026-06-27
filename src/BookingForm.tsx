@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 
-// ⚠️  Replace this with your real Formspree form ID (see setup guide)
-const FORMSPREE_ID = 'xlgyggkv'
+// ⚠️ Replace with your real Formspree form ID (see SETUP_GUIDE.md Step 3)
+const FORMSPREE_ID = 'YOUR_FORM_ID'
 
-type Tab = 'accommodation' | 'tembe'
+type Tab = 'accommodation' | 'activity'
 
-export default function BookingForm({ defaultTab = 'accommodation', onClose }: { defaultTab?: Tab; onClose?: () => void }) {
+interface Props {
+  defaultTab?: Tab
+  prefilledActivity?: string
+  onClose?: () => void
+}
+
+export default function BookingForm({ defaultTab = 'accommodation', prefilledActivity, onClose }: Props) {
   const [tab, setTab] = useState<Tab>(defaultTab)
   const [state, handleSubmit] = useForm(FORMSPREE_ID)
 
@@ -15,48 +21,77 @@ export default function BookingForm({ defaultTab = 'accommodation', onClose }: {
       <div className="form-success">
         <div className="form-success-icon">✓</div>
         <h3>Enquiry sent!</h3>
-        <p>We'll reply to your email within 24 hours.<br />For urgent queries WhatsApp us on <strong>+27 72 242 3571</strong>.</p>
-        {onClose && <button className="btn btn-primary" onClick={onClose} style={{ marginTop: '1.25rem' }}>Close</button>}
+        <p>
+          Thank you — we'll reply to <strong>info@kosibaysouthafrica.co.za</strong> within 24 hours.<br />
+          For urgent queries call or WhatsApp us on <strong>+27 72 242 3571</strong>.
+        </p>
+        {onClose && (
+          <button className="btn btn-primary" onClick={onClose} style={{ marginTop: '1.25rem' }}>
+            Close
+          </button>
+        )}
       </div>
     )
   }
 
   return (
     <form className="booking-form" onSubmit={handleSubmit} noValidate>
-      {/* Formspree config — sets email subject and recipient */}
-      <input type="hidden" name="_subject" value={tab === 'tembe' ? 'New Tembe Safari Enquiry — Kingfisher Lodge' : 'New Accommodation Enquiry — Kingfisher Lodge'} />
+      {/* Formspree hidden config */}
+      <input type="hidden" name="_subject" value={
+        tab === 'activity'
+          ? `New Activity Enquiry: ${prefilledActivity ?? 'Activity'} — Kingfisher Lodge`
+          : 'New Accommodation Enquiry — Kingfisher Bush Lodge'
+      } />
       <input type="hidden" name="enquiry_type" value={tab} />
+      {prefilledActivity && <input type="hidden" name="activity" value={prefilledActivity} />}
 
-      {/* Tab toggle */}
-      <div className="form-tabs" role="group" aria-label="Enquiry type">
-        <button type="button" className={`form-tab${tab === 'accommodation' ? ' active' : ''}`} onClick={() => setTab('accommodation')}>🏕 Accommodation</button>
-        <button type="button" className={`form-tab${tab === 'tembe' ? ' active' : ''}`} onClick={() => setTab('tembe')}>🦒 Tembe Safari</button>
-      </div>
+      {/* Tab toggle — only show if no activity was prefilled */}
+      {!prefilledActivity && (
+        <div className="form-tabs" role="group" aria-label="Enquiry type">
+          <button type="button" className={`form-tab${tab === 'accommodation' ? ' active' : ''}`} onClick={() => setTab('accommodation')}>
+            🏕 Accommodation
+          </button>
+          <button type="button" className={`form-tab${tab === 'activity' ? ' active' : ''}`} onClick={() => setTab('activity')}>
+            🗺 Activity / Tour
+          </button>
+        </div>
+      )}
+
+      {prefilledActivity && (
+        <div className="form-activity-label">
+          Enquiring about: <strong>{prefilledActivity}</strong>
+        </div>
+      )}
 
       <div className="form-grid">
+        {/* Name */}
         <div className="form-group">
           <label htmlFor="bf-name">Full name *</label>
           <input id="bf-name" type="text" name="name" required placeholder="Your full name" />
           <ValidationError prefix="Name" field="name" errors={state.errors} className="form-error" />
         </div>
 
+        {/* Email */}
         <div className="form-group">
           <label htmlFor="bf-email">Email address *</label>
           <input id="bf-email" type="email" name="email" required placeholder="you@example.com" />
           <ValidationError prefix="Email" field="email" errors={state.errors} className="form-error" />
         </div>
 
+        {/* Phone */}
         <div className="form-group">
-          <label htmlFor="bf-phone">WhatsApp / phone</label>
-          <input id="bf-phone" type="tel" name="phone" placeholder="+27 72 ..." />
+          <label htmlFor="bf-phone">WhatsApp / phone number</label>
+          <input id="bf-phone" type="tel" name="phone" placeholder="+27 ..." />
         </div>
 
+        {/* Country */}
         <div className="form-group">
           <label htmlFor="bf-country">Country</label>
           <input id="bf-country" type="text" name="country" placeholder="e.g. South Africa" />
         </div>
 
-        {tab === 'accommodation' ? (<>
+        {/* ── ACCOMMODATION fields ── */}
+        {tab === 'accommodation' && (<>
           <div className="form-group">
             <label htmlFor="bf-checkin">Check-in date *</label>
             <input id="bf-checkin" type="date" name="checkin" required />
@@ -73,31 +108,61 @@ export default function BookingForm({ defaultTab = 'accommodation', onClose }: {
             <label htmlFor="bf-room">Preferred accommodation</label>
             <select id="bf-room" name="room_type">
               <option value="">— Please select —</option>
-              <option>Bush Chalet (up to 2 guests)</option>
-              <option>Family Cabin (up to 4 guests)</option>
-              <option>Tented Suite (up to 2 guests)</option>
+              <option>Luxury Tented En-Suite Chalet (sleeps 2–3)</option>
+              <option>Standard Safari Tent (sleeps 2)</option>
+              <option>Luxury Family En-Suite Tent (sleeps up to 5)</option>
+              <option>Two Bedroom Family Unit (sleeps up to 5)</option>
+              <option>Campsite (up to 4 guests)</option>
               <option>Not sure — please advise</option>
             </select>
           </div>
 
           <div className="form-group">
-            <label htmlFor="bf-adults">Adults *</label>
+            <label htmlFor="bf-adults">Number of adults *</label>
             <select id="bf-adults" name="adults" required>
-              {[1,2,3,4,5,6].map(n => <option key={n}>{n}</option>)}
+              {[1,2,3,4,5,6,7,8].map(n => <option key={n}>{n}</option>)}
             </select>
           </div>
 
           <div className="form-group">
             <label htmlFor="bf-children">Children (under 12)</label>
             <select id="bf-children" name="children">
-              {[0,1,2,3,4].map(n => <option key={n}>{n}</option>)}
+              {[0,1,2,3,4,5].map(n => <option key={n}>{n}</option>)}
             </select>
           </div>
-        </>) : (<>
+        </>)}
+
+        {/* ── ACTIVITY fields ── */}
+        {tab === 'activity' && (<>
+          {!prefilledActivity && (
+            <div className="form-group form-full">
+              <label htmlFor="bf-activity">Activity / tour *</label>
+              <select id="bf-activity" name="activity_name" required>
+                <option value="">— Please select —</option>
+                <optgroup label="Featured experiences">
+                  <option>Tembe Elephant Park — Half-day safari</option>
+                  <option>Tembe Elephant Park — Full-day safari</option>
+                  <option>Tembe Elephant Park — Lion Monitoring Experience</option>
+                  <option>Kosi Aquarium Snorkelling Adventure</option>
+                  <option>Three-Lake Boat Cruise</option>
+                  <option>Kosi Mouth Turtle Tour (Nov–Mar)</option>
+                </optgroup>
+                <optgroup label="More adventures">
+                  <option>Kosi Bay Kayaking</option>
+                  <option>Best of Kosi Bay (full day)</option>
+                  <option>Fish Kraal &amp; Palm Wine Tour</option>
+                  <option>Birding Walk</option>
+                  <option>Kosi Mouth Guided Hike</option>
+                </optgroup>
+              </select>
+              <ValidationError prefix="Activity" field="activity_name" errors={state.errors} className="form-error" />
+            </div>
+          )}
+
           <div className="form-group">
-            <label htmlFor="bf-safari-date">Preferred safari date *</label>
-            <input id="bf-safari-date" type="date" name="safari_date" required />
-            <ValidationError prefix="Safari date" field="safari_date" errors={state.errors} className="form-error" />
+            <label htmlFor="bf-act-date">Preferred date *</label>
+            <input id="bf-act-date" type="date" name="activity_date" required />
+            <ValidationError prefix="Date" field="activity_date" errors={state.errors} className="form-error" />
           </div>
 
           <div className="form-group">
@@ -106,43 +171,44 @@ export default function BookingForm({ defaultTab = 'accommodation', onClose }: {
               {[1,2,3,4,5,6,7,8,'9+'].map(n => <option key={String(n)}>{n}</option>)}
             </select>
           </div>
-
-          <div className="form-full form-group">
-            <label htmlFor="bf-tour">Tour preference</label>
-            <select id="bf-tour" name="tour_type">
-              <option value="">— Please select —</option>
-              <option>Full-day Tembe game drive</option>
-              <option>Half-day Tembe game drive</option>
-              <option>Sunrise game drive</option>
-              <option>Night drive</option>
-              <option>Not sure — please send rates</option>
-            </select>
-          </div>
         </>)}
 
+        {/* Message — both tabs */}
         <div className="form-group form-full">
-          <label htmlFor="bf-msg">{tab === 'tembe' ? 'Questions / rate query' : 'Special requests or questions'}</label>
-          <textarea id="bf-msg" name="message" rows={4}
-            placeholder={tab === 'tembe' ? 'Ask about rates, accessibility, what to bring…' : 'Dietary needs, special occasion, accessibility…'} />
+          <label htmlFor="bf-msg">
+            {tab === 'activity' ? 'Questions or special requests' : 'Special requests or questions'}
+          </label>
+          <textarea
+            id="bf-msg"
+            name="message"
+            rows={4}
+            placeholder={
+              tab === 'activity'
+                ? 'Ask about rates, what to bring, accessibility, group discounts…'
+                : 'Dietary needs, special occasion, accessibility, extra beds…'
+            }
+          />
           <ValidationError prefix="Message" field="message" errors={state.errors} className="form-error" />
         </div>
       </div>
 
       {tab === 'accommodation' && (
         <p className="form-note">
-          💡 For instant confirmation, book directly at{' '}
-          <a href="https://book.nightsbridge.com/23617" target="_blank" rel="noopener">Nightsbridge</a>.
-          Enquiries are answered within 24 hours.
+          💡 For instant confirmation, also try{' '}
+          <a href="https://book.nightsbridge.com/23617" target="_blank" rel="noopener">
+            Nightsbridge
+          </a>
+          {' '}— our secure online booking system. Enquiries are answered within 24 hours.
         </p>
       )}
-      {tab === 'tembe' && (
+      {tab === 'activity' && (
         <p className="form-note">
-          🦒 We'll reply with current Tembe rates and availability within 24 hours.
+          🗺 We'll reply with current rates, availability and everything you need to know within 24 hours.
         </p>
       )}
 
       <button type="submit" className="btn btn-primary form-submit" disabled={state.submitting}>
-        {state.submitting ? 'Sending…' : `Send ${tab === 'tembe' ? 'Safari' : 'Booking'} Enquiry`}
+        {state.submitting ? 'Sending…' : 'Send Enquiry'}
       </button>
 
       <ValidationError errors={state.errors} className="form-error form-error--global" />
