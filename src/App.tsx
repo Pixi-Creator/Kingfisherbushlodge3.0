@@ -25,10 +25,10 @@ const ROOMS = [
     desc: 'Fully equipped, air-conditioned chalet with kitchenette and private braai area. Sleeps 2 guests comfortably with an extra bed available on request.',
     features: ['Air conditioning', 'En-suite bathroom', 'Kitchenette', 'Private braai area', 'Extra bed on request'],
     images: [
-      { src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80', alt: 'Luxury Tented En-Suite Chalet exterior' },
-      { src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80', alt: 'Chalet bedroom' },
-      { src: 'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80', alt: 'Chalet kitchenette and living area' },
-      { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80', alt: 'Chalet en-suite bathroom' },
+      { src: 'public/images/rooms/chalet/1.jpg', alt: 'Luxury Tented En-Suite Chalet exterior' },
+      { src: 'public/images/rooms/chalet/2.jpg', alt: 'Chalet bedroom' },
+      { src: 'public/images/rooms/chalet/3.jpg', alt: 'Chalet kitchenette and living area' },
+      { src: 'public/images/rooms/chalet/4.jpg', alt: 'Chalet en-suite bathroom' },
     ],
   },
   {
@@ -38,10 +38,10 @@ const ROOMS = [
     desc: 'Comfortable safari tents with access to communal kitchen. Each unit has its own private ablution facilities and private braai area — the true bush experience.',
     features: ['Private ablution', 'Communal kitchen', 'Private braai area', 'Bush atmosphere'],
     images: [
-      { src: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80', alt: 'Standard Safari Tent exterior' },
-      { src: 'https://images.unsplash.com/photo-1519302959554-a75be0afc82a?w=800&q=80', alt: 'Safari Tent interior' },
-      { src: 'https://images.unsplash.com/photo-1496947850313-7743325fa58c?w=800&q=80', alt: 'Safari Tent bed setup' },
-      { src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80', alt: 'Safari Tent surroundings' },
+      { src: 'public/images/rooms/safari/1.jpg', alt: 'Standard Safari Tent exterior' },
+      { src: 'public/images/rooms/safari/2.jpg', alt: 'Safari Tent interior' },
+      { src: 'public/images/rooms/safari/3.jpg', alt: 'Safari Tent bed setup' },
+      { src: 'public/images/rooms/safari/4.jpg', alt: 'Safari Tent surroundings' },
     ],
   },
   {
@@ -49,12 +49,12 @@ const ROOMS = [
     capacity: 'Sleeps up to 5',
     badge: 'Family favourite',
     desc: 'Spacious family tent with a queen bed, bunk bed and sleeper couch. Perfect for families wanting comfort with a true safari feel. Sleeps up to 5 guests.',
-    features: ['Queen bed + bunks', 'Sleeper couch', 'En-suite bathroom', 'Private braai', 'Family sized'],
+    features: ['Queen bed + bunks', 'Air conditioning', 'En-suite bathroom', 'Private braai', 'Family sized'],
     images: [
-      { src: 'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&q=80', alt: 'Luxury Family Tent exterior' },
-      { src: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80', alt: 'Family Tent living space' },
-      { src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80', alt: 'Family Tent sleeping area' },
-      { src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80', alt: 'Family Tent outdoor area' },
+      { src: 'public/images/rooms/family/1.jpg', alt: 'Luxury Family Tent exterior' },
+      { src: 'public/images/rooms/family/2.jpg', alt: 'Family Tent living space' },
+      { src: 'public/images/rooms/family/3.jpg', alt: 'Family Tent sleeping area' },
+      { src: 'public/images/rooms/family/4.jpg', alt: 'Family Tent outdoor area' },
     ],
   },
   {
@@ -64,10 +64,10 @@ const ROOMS = [
     desc: 'Two-bedroom family unit with kitchenette, lounge area and private braai facilities. Ideal for families or groups wanting a home-away-from-home in the bush.',
     features: ['2 bedrooms', 'Kitchenette', 'Lounge area', 'Private braai', 'Up to 5 guests'],
     images: [
-      { src: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80', alt: 'Two Bedroom Family Unit exterior' },
-      { src: 'https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80', alt: 'Family Unit bedroom' },
-      { src: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80', alt: 'Family Unit lounge' },
-      { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', alt: 'Family Unit kitchenette' },
+      { src: 'public/images/rooms/two-bedroom/1.jpg', alt: 'Two Bedroom Family Unit exterior' },
+      { src: 'public/images/rooms/two-bedroom/2.jpg', alt: 'Family Unit bedroom' },
+      { src: 'public/images/rooms/two-bedroom/3.jpg', alt: 'Family Unit lounge' },
+      { src: 'public/images/rooms/two-bedroom/4.jpg', alt: 'Family Unit kitchenette' },
     ],
   },
   {
@@ -77,10 +77,10 @@ const ROOMS = [
     desc: 'Spacious campsites featuring electrical points, water points and private ablution facilities. Rates include up to 4 guests per campsite. Bring your own tent or caravan.',
     features: ['Electrical points', 'Water points', 'Private ablution', 'Up to 4 guests', 'Tent or caravan'],
     images: [
-      { src: 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?w=800&q=80', alt: 'Campsite at Kingfisher' },
-      { src: 'https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=800&q=80', alt: 'Campsite bush setting' },
-      { src: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&q=80', alt: 'Campsite ablution facilities' },
-      { src: 'https://images.unsplash.com/photo-1525811902-f2342640856e?w=800&q=80', alt: 'Campsite evening atmosphere' },
+      { src: 'public/images/rooms/campsite/1.jpg', alt: 'Campsite at Kingfisher' },
+      { src: 'public/images/rooms/campsite/2.jpg', alt: 'Campsite bush setting' },
+      { src: 'public/images/rooms/campsite/3.jpg', alt: 'Campsite ablution facilities' },
+      { src: 'public/images/rooms/campsite/4.jpg', alt: 'Campsite evening atmosphere' },
     ],
   },
 ]
@@ -177,10 +177,10 @@ const HIGHLIGHTS = [
 ]
 
 const GALLERY = [
-  { src: 'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=900&q=80', tall: true,  alt: 'Wildlife at Kosi Bay' },
-  { src: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600&q=80', tall: false, alt: 'Kosi estuary waters' },
-  { src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80', tall: false, alt: 'Coastal forest trail' },
-  { src: 'https://images.unsplash.com/photo-1562155955-1cb2d73488d7?w=700&q=80', tall: false, alt: 'Sunset over the Kosi lake system' },
+  { src: 'public/images/gallery/1.jpg', tall: true,  alt: 'Wildlife at Kosi Bay' },
+  { src: 'public/images/gallery/2.jpg', tall: false, alt: 'Kosi estuary waters' },
+  { src: 'public/images/gallery/3.jpg', tall: false, alt: 'Coastal forest trail' },
+  { src: 'public/images/gallery/4.jpg', tall: false, alt: 'Sunset over the Kosi lake system' },
 ]
 
 /* ─── WhatsApp icon ─── */
@@ -268,8 +268,8 @@ export default function App() {
           <div className="container">
             <div className="about-inner">
               <div className="about-images reveal">
-                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=900&q=80" alt="Kosi Bay estuary at golden hour — accommodation Kosi Bay" className="about-img-main" loading="lazy" />
-                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Coastal forest surrounding Kingfisher Bush Lodge" className="about-img-inset" loading="lazy" />
+                <img src="public/images/activities/snorkeling.jpg" alt="Kosi Bay estuary at golden hour — accommodation Kosi Bay" className="about-img-main" loading="lazy" />
+                <img src="public/images/restaurant/1.jpg" alt="Coastal forest surrounding Kingfisher Bush Lodge" className="about-img-inset" loading="lazy" />
               </div>
               <div className="about-text reveal">
                 <span className="eyebrow">Accommodation in Kosi Bay</span>
@@ -395,7 +395,7 @@ export default function App() {
             <div className="restaurant-inner">
               <div className="restaurant-img-wrap reveal">
                 <img
-                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80"
+                  src="public/images/hero/hero-3.jpg"
                   alt="Restaurant at Kingfisher Bush Lodge Kosi Bay"
                   className="restaurant-img"
                   loading="lazy"
@@ -417,8 +417,6 @@ export default function App() {
                   <div className="rest-item">🥗 Light lunches</div>
                   <div className="rest-item">🍽 Dinners until 19:00</div>
                   <div className="rest-item">☕ Coffee, tea &amp; cold drinks</div>
-                  <div className="rest-item">🔥 Traditional braai evenings</div>
-                  <div className="rest-item">🍷 Licensed bar</div>
                 </div>
                 <a href={WA} className="btn btn-primary" target="_blank" rel="noopener" style={{ marginTop: '1rem' }}>
                   <WaIcon size={17} /> Ask about meal bookings
@@ -431,59 +429,108 @@ export default function App() {
         {/* ── SPA ── */}
         <section className="spa section" id="spa" aria-labelledby="spa-h">
           <div className="container">
+            <div className="section-header reveal" style={{ marginBottom: '2.5rem' }}>
+              <span className="eyebrow">Relax &amp; restore</span>
+              <h2 id="spa-h">Zinhozemvelo Mobile Spa</h2>
+              <div className="divider" />
+              <p style={{ color: 'var(--text-muted)', maxWidth: '52ch', margin: 'auto' }}>
+                <em>"Relax Keep Calm — Now You Are In Good Hands"</em><br />
+                Our resident mobile spa therapists visit the lodge by appointment. Unwind after a day of adventures with a range of professional treatments.
+              </p>
+            </div>
+
             <div className="spa-inner">
-              <div className="spa-text reveal">
-                <span className="eyebrow">Relax &amp; restore</span>
-                <h2 id="spa-h">Bush Spa</h2>
-                <div className="divider" />
-                <p>
-                  Unwind after a day of adventures at our tranquil bush spa, nestled in the natural surroundings of the lodge. Our therapists offer a range of treatments to soothe tired bodies and calm the mind.
-                </p>
-                <div className="spa-treatments">
-                  <div className="spa-treatment">
-                    <span className="spa-treatment-icon">💆</span>
-                    <div>
-                      <strong>Full Body Massage</strong>
-                      <span>Swedish, deep tissue and relaxation options</span>
-                    </div>
-                  </div>
-                  <div className="spa-treatment">
-                    <span className="spa-treatment-icon">🌿</span>
-                    <div>
-                      <strong>Aromatherapy Treatments</strong>
-                      <span>Essential oil therapies and body wraps</span>
-                    </div>
-                  </div>
-                  <div className="spa-treatment">
-                    <span className="spa-treatment-icon">✋</span>
-                    <div>
-                      <strong>Manicure &amp; Pedicure</strong>
-                      <span>Nail care and hand / foot treatments</span>
-                    </div>
-                  </div>
-                  <div className="spa-treatment">
-                    <span className="spa-treatment-icon">😌</span>
-                    <div>
-                      <strong>Facial Treatments</strong>
-                      <span>Cleansing, hydrating and revitalising facials</span>
+              <div className="spa-treatments-grid reveal">
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">💆</span>
+                  <div className="spa-card-body">
+                    <h4>Swedish Full Body Massage</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">45 min</span><span className="spa-price">R380</span></span>
+                      <span className="spa-price-item"><span className="spa-duration">60 min</span><span className="spa-price">R450</span></span>
                     </div>
                   </div>
                 </div>
-                <div className="spa-booking-note">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  Spa treatments are available to lodge guests by appointment. Please book at least 24 hours in advance.
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">🌿</span>
+                  <div className="spa-card-body">
+                    <h4>Aromatherapy</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">Full treatment</span><span className="spa-price">R480</span></span>
+                    </div>
+                  </div>
                 </div>
-                <a href={WA} className="btn btn-primary" target="_blank" rel="noopener" style={{ marginTop: '1.25rem' }}>
-                  <WaIcon size={17} /> Book a spa treatment
-                </a>
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">💪</span>
+                  <div className="spa-card-body">
+                    <h4>Deep Tissue Massage</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">Full treatment</span><span className="spa-price">R640</span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">🙆</span>
+                  <div className="spa-card-body">
+                    <h4>Back, Neck &amp; Shoulders</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">30 min</span><span className="spa-price">R300</span></span>
+                      <span className="spa-price-item"><span className="spa-duration">45 min</span><span className="spa-price">R340</span></span>
+                    </div>
+                    <p className="spa-addon">+ R60 to add Hot Stone Therapy</p>
+                  </div>
+                </div>
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">🦶</span>
+                  <div className="spa-card-body">
+                    <h4>Foot Massage</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">20 min</span><span className="spa-price">R200</span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">✨</span>
+                  <div className="spa-card-body">
+                    <h4>Foot Exfoliation &amp; Massage</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">45 min</span><span className="spa-price">R320</span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="spa-price-card">
+                  <span className="spa-card-icon">😌</span>
+                  <div className="spa-card-body">
+                    <h4>Face Cleansing &amp; Steaming</h4>
+                    <div className="spa-prices">
+                      <span className="spa-price-item"><span className="spa-duration">Full treatment</span><span className="spa-price">R300</span></span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div className="spa-img-wrap reveal">
+
+              <div className="spa-img-col reveal">
                 <img
                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80"
-                  alt="Bush Spa at Kingfisher Lodge Kosi Bay"
+                  alt="Zinhozemvelo Mobile Spa at Kingfisher Bush Lodge Kosi Bay"
                   className="spa-img"
                   loading="lazy"
                 />
+                <div className="spa-booking-note">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Available to lodge guests by appointment. Please book <strong>at least 24 hours in advance</strong> via WhatsApp or at reception.
+                </div>
+                <a href={WA} className="btn btn-primary" target="_blank" rel="noopener" style={{ marginTop: '1rem', width: '100%', justifyContent: 'center' }}>
+                  <WaIcon size={17} /> Book a spa treatment
+                </a>
               </div>
             </div>
           </div>

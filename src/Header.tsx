@@ -25,8 +25,13 @@ export default function Header() {
       <header className={`header${scrolled ? ' scrolled' : ''}`}>
         <div className="container header-inner">
 
+          {/* Logo — oval shape, no circle crop */}
           <a href="#home" className="logo" onClick={close} aria-label="Kingfisher Bush Lodge home">
-            <img src={LOGO_SRC} alt="Kingfisher Bush Lodge logo" className="logo-img" />
+            <img
+              src={LOGO_SRC}
+              alt="Kingfisher Bush Lodge — Kosi Bay South Africa"
+              className="logo-img"
+            />
             <div className="logo-text">
               <span className="logo-name">Kingfisher Bush Lodge</span>
               <span className="logo-tagline">Kosi Bay · KwaZulu-Natal</span>
@@ -54,6 +59,7 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Mobile full-screen nav */}
       <nav className={`mobile-nav${open ? ' open' : ''}`} aria-label="Mobile navigation">
         <img src={LOGO_SRC} alt="" className="mobile-nav-logo" aria-hidden="true" />
         <a href="#about"         onClick={close}>About</a>
