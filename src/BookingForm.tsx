@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 
 // ⚠️ Replace with your real Formspree form ID (see SETUP_GUIDE.md Step 3)
-const FORMSPREE_ID = 'YOUR_FORM_ID'
+const FORMSPREE_ID = 'xlgyggkv'
 
 type Tab = 'accommodation' | 'activity'
 
